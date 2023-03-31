@@ -9,3 +9,6 @@ strcpy(_text,text)
 //si text var de clase, y text input se llamaran igual, se escribiria asi:
 
 strcp(this->text,text)
+
+
+//constructor copia (other) sss

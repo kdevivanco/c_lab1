@@ -20,7 +20,12 @@ int main(){
         strcpy(_text;other._text);
     }
     //Constructor move
-    Text::Text(Text&&other);
+    Text::Text(Text&&other){
+        _sz = other._sz;
+        _tezt = other._tex;
+        other._sz = 0;
+        other._text = nullptr;
+    }
     //Asignacion copia sobre carga de operadores
     Text& operator = (const Text& other); //Asignacion copia
     Text& operator = (Text&& other); //Asignacion move
