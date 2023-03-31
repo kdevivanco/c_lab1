@@ -27,9 +27,13 @@ class Text{
 
     //Siempre que se usa un constructor move se tiene que poner noexcept al final de la declaracion
 
-    void operator++();
+    friend istream& operator>> (istream&& in, const Text& text); // declaracion de amistad/relacion que permite al operador >> acceder a variable sprivadas de la clase
+
+    // void operator++();
 };
 
+
+istream &operator>> (istream &in, const Text &text);//Declaracion de la sobre carga
 //Text operator^(const Text& texto1, const Text& texto2) //Sobre carga como funcion 
 
 #endif //PROG3_UNIT1_TEXT_V2023_1_TEXT_H
